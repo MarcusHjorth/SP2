@@ -31,11 +31,6 @@ public abstract class ACar {
 
     @Override
     public String toString() {
-        return "ACar{" +
-                "registrationNumber='" + registrationNumber + '\'' +
-                ", make='" + make + '\'' +
-                ", model='" + model + '\'' +
-                ", numberOfDoors=" + numberOfDoors +
-                '}';
+        return "RegNumber: " + registrationNumber + " Make: " + make + " Model: " + model + " NumberOfDoors: " + numberOfDoors;
     }
 }

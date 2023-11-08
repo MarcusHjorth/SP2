@@ -16,6 +16,6 @@ public abstract class AFuelCar extends ACar{
 
     @Override
     public String toString() {
-        return "AFuelCar{" + "kmPrLitre=" + kmPrLitre + '}';
+        return super.toString() + " FuelCar km/Pr/Litre: " + kmPrLitre;
     }
 }
