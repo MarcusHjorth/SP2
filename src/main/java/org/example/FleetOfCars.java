@@ -1,20 +1,30 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.text.NumberFormat;
 
-public class FleetOfCars {
-    private ArrayList<String> Car = new ArrayList<>();
+public class FleetOfCars{
+    private final ArrayList<Car> fleet = new ArrayList<>();
 
-    public void addCar(){
-
+    public void addCar(Car car){
+        fleet.add(car);
     }
 
     public int getTotalRegistrationFeeForFleet(){
-        return 0;
+        int totalRegistrationFee = 0;
+        for (Car car : fleet){
+            totalRegistrationFee += car.getRegistrationFee();
+        }
+        return totalRegistrationFee;
     }
 
     @Override
     public String toString() {
-        return "dsf";
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+
+        String carsInList = "";
+        for (Car car : fleet)
+            carsInList += car + "\n";
+        return carsInList + "\nTotal cars: " + fleet.size() + "\nTotal fleet registration fee " + formatter.format(getTotalRegistrationFeeForFleet());
     }
 }

@@ -25,7 +25,7 @@ public class ElectricCar extends ACar {
 
 
     public int getRegistrationFee(){
-        float WhKm = 100 / (getWhPrKm() /(float)91.25);
+        double WhKm = 100 / (getWhPrKm() / 91.25);
         if (WhKm >= 20 ){
             return 330;
         } else if (WhKm >= 15 && WhKm < 20){
@@ -42,6 +42,6 @@ public class ElectricCar extends ACar {
 
     @Override
     public String toString() {
-        return super.toString() + " Wh/Pr/Km: " + getWhPrKm() + " BatteryCapacity: " + batteryCapacity + " maxRange: " + maxRange + " RegistrationFee: " + getRegistrationFee();
+        return super.toString() + " | Wh/Pr/Km: " + getWhPrKm() + " | BatteryCapacity: " + getBatteryCapacityKWh() + " | maxRange: " + getMaxRange() + " | RegistrationFee: " + getRegistrationFee();
     }
 }

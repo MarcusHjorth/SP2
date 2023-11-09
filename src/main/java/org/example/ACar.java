@@ -1,10 +1,10 @@
 package org.example;
 
-public abstract class ACar {
-    private String registrationNumber;
-    private String make;
-    private String model;
-    private int numberOfDoors;
+public abstract class ACar implements Car {
+    private final String registrationNumber;
+    private final String make;
+    private final String model;
+    private final int numberOfDoors;
 
     public ACar(String registrationNumber, String make, String model, int numberOfDoors){
         this.registrationNumber = registrationNumber;
@@ -31,6 +31,6 @@ public abstract class ACar {
 
     @Override
     public String toString() {
-        return "RegNumber: " + registrationNumber + " Make: " + make + " Model: " + model + " NumberOfDoors: " + numberOfDoors;
+        return "RegNumber: " + getRegistrationNumber() + " | Make: " + getMake() + " | Model: " + getModel() + " | NumberOfDoors: " + getNumberOfDoors();
     }
 }
